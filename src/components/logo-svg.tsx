@@ -1,8 +1,6 @@
 import { SVGProps } from "react"
 
-interface LogoSvgProps extends SVGProps<SVGSVGElement> {}
-
-export const LogoSvg = ({ className }: LogoSvgProps) => {
+export const LogoSvg = ({ className }: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -58,8 +58,7 @@ const data = {
   ],
 }
 
-interface AppSidebarProps extends ComponentProps<typeof Sidebar> {}
-export const AppSidebar = ({ ...props }: AppSidebarProps) => {
+export const AppSidebar = ({ ...props }: ComponentProps<typeof Sidebar>) => {
   return (
     <Sidebar
       variant="floating"
