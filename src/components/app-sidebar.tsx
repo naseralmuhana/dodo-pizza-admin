@@ -84,7 +84,7 @@ export const AppSidebar = ({ ...props }: ComponentProps<typeof Sidebar>) => {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
+        <NavMain items={data.navMain} label="General" />
       </SidebarContent>
       <SidebarFooter>{/* nav user */}</SidebarFooter>
     </Sidebar>

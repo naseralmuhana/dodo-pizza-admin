@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation"
 import {
   SidebarGroup,
   SidebarGroupContent,
+  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -21,14 +22,16 @@ interface navMain extends ComponentPropsWithoutRef<typeof SidebarGroup> {
     url: string
     icon: LucideIcon
   }[]
+  label?: string
 }
 
-export const NavMain = ({ items, ...props }: navMain) => {
+export const NavMain = ({ items, label, ...props }: navMain) => {
   const pathname = usePathname()
   const { setOpenMobile } = useSidebar()
 
   return (
     <SidebarGroup {...props}>
+      {label && <SidebarGroupLabel>{label}</SidebarGroupLabel>}
       <SidebarGroupContent>
         <SidebarMenu>
           {items.map((item) => (
