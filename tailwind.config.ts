@@ -71,14 +71,19 @@ export default {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
-        slide: {
+        "slide-right": {
           from: { transform: "translateX(-10%)" },
           to: { transform: "translateX(0%)" },
+        },
+        "slide-down": {
+          from: { transform: "translateY(-10%)" },
+          to: { transform: "translateY(0%)" },
         },
       },
       animation: {
         appear: "appear 0.3s ease-in-out",
-        slide: "slide 0.3s ease-in-out",
+        "slide-right": "slide-right 0.3s ease-in-out",
+        "slide-down": "slide-down 0.3s ease-in-out",
       },
     },
   },

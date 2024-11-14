@@ -63,7 +63,7 @@ export const AppSidebar = ({ ...props }: ComponentProps<typeof Sidebar>) => {
     <Sidebar
       variant="floating"
       collapsible="icon"
-      className="animate-slide"
+      className="animate-slide-right"
       {...props}
     >
       <SidebarHeader>
