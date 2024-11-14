@@ -6,6 +6,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function capitalize(str: string) {
-  if (!str) return str // Handle empty or null input
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
+  return str ? str[0].toUpperCase() + str.slice(1).toLowerCase() : str
 }
