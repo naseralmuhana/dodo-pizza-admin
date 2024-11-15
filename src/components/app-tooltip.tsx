@@ -2,9 +2,9 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
+  TooltipTrigger
 } from "@/components/ui/tooltip"
-import { capitalize } from "@/lib/utils"
+import { capitalizeFirstLetter } from "@/lib/utils"
 
 interface AppTooltipProps {
   children: React.ReactNode
@@ -15,14 +15,14 @@ interface AppTooltipProps {
 export const AppTooltip = ({
   children,
   content,
-  isCapitalize,
+  isCapitalize
 }: AppTooltipProps) => {
   return (
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>{children}</TooltipTrigger>
         <TooltipContent>
-          <p>{isCapitalize ? capitalize(content) : content}</p>
+          <p>{isCapitalize ? capitalizeFirstLetter(content) : content}</p>
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>

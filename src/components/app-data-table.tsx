@@ -17,8 +17,10 @@ export const AppDataTable = <TData, TValue>({
 }: AppDataTableProps<TData, TValue>) => {
   const { table } = useDataTable({ columns, data })
   return (
-    <DataTable table={table}>
-      <DataTableToolbar table={table} />
-    </DataTable>
+    <section className="rounded-lg border border-sidebar-border bg-sidebar shadow">
+      <DataTable table={table} className="p-4">
+        <DataTableToolbar table={table} />
+      </DataTable>
+    </section>
   )
 }

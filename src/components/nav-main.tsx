@@ -12,9 +12,9 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  useSidebar,
+  useSidebar
 } from "@/components/ui/sidebar"
-import { capitalize } from "@/lib/utils"
+import { capitalizeFirstLetter } from "@/lib/utils"
 
 interface navMain extends ComponentPropsWithoutRef<typeof SidebarGroup> {
   items: {
@@ -38,13 +38,13 @@ export const NavMain = ({ items, label, ...props }: navMain) => {
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton
                 asChild
-                tooltip={capitalize(item.title)}
+                tooltip={capitalizeFirstLetter(item.title)}
                 isActive={pathname === item.url}
                 onClick={() => setOpenMobile(false)}
               >
                 <Link href={item.url}>
                   <item.icon />
-                  <span>{capitalize(item.title)}</span>
+                  <span>{capitalizeFirstLetter(item.title)}</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
