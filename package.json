@@ -38,6 +38,7 @@
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
+    "xlsx": "file:vendor/xlsx-0.20.3.tgz",
     "zod": "^3.23.8"
   },
   "devDependencies": {

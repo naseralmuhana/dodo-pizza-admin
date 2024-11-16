@@ -43,6 +43,11 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Scrollbar colors for light theme */
+    --scrollbar-track: 0 0% 98%; /* Light track */
+    --scrollbar-thumb: 0 0% 70%; /* Dark thumb */
+    --scrollbar-thumb-hover: 100 0% 75%; /* Darker thumb on hover */
   }
 
   .dark {
@@ -80,6 +85,11 @@ body {
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Scrollbar colors for dark theme */
+    --scrollbar-track: 240 5.9% 10%;
+    --scrollbar-thumb: 240 5.9% 50%;
+    --scrollbar-thumb-hover: 240 5.9% 55%;
   }
 }
 
@@ -90,4 +100,29 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+
+  /* ::-webkit-scrollbar {
+    width: 9px;
+  }
+
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--scrollbar-track));
+  }
+
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--scrollbar-thumb));
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+
+ 
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--scrollbar-thumb-hover));
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+  } */
 }

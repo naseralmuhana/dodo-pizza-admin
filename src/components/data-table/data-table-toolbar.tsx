@@ -18,7 +18,7 @@ export function DataTableToolbar<TData>({
   const isFiltered = table.getState().columnFilters.length > 0
 
   return (
-    <div className="flex items-center justify-between overflow-auto max-sm:pb-1.5">
+    <div className="flex items-center justify-between gap-2 overflow-auto max-sm:pb-1.5">
       <div className="flex flex-1 items-center space-x-2">
         <Input
           placeholder="Filter name..."
