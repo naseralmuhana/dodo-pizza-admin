@@ -4,10 +4,6 @@ import { type NextRequest } from "next/server"
 
 import { db } from "@/db"
 
-type Context = {
-  params: { table: string }
-}
-
 /**
  * Handles a GET request to export data from a specified database table in various formats.
  *
@@ -30,12 +26,15 @@ type Context = {
  * - JSON: Returns data in JSON format.
  * - HTML: Returns data as an HTML table.
  */
-export async function GET(request: NextRequest, context: Context) {
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ table: string }> }
+) {
   const searchParams = request.nextUrl.searchParams
   const format = searchParams.get("format") // Get the requested file format (e.g., csv, xlsx)
 
   try {
-    const table = context.params.table
+    const table = (await params).table
     if (!table) throw new Error("Table name required.") // Ensure a table name is provided
 
     // Get all table names from the database
