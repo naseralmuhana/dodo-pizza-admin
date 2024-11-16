@@ -10,11 +10,11 @@ import {
   type TableOptions,
   type SortingState,
   type VisibilityState,
-  type ColumnFiltersState,
+  type ColumnFiltersState
 } from "@tanstack/react-table"
 
 interface useDataTableProps<TData>
-  extends Omit<TableOptions<TData>, "getCoreRowModel"> {}
+  extends Omit<TableOptions<TData>, "state" | "getCoreRowModel"> {}
 
 export const useDataTable = <TData>({ ...props }: useDataTableProps<TData>) => {
   const [rowSelection, setRowSelection] = useState({})
@@ -28,7 +28,7 @@ export const useDataTable = <TData>({ ...props }: useDataTableProps<TData>) => {
       sorting,
       columnVisibility,
       rowSelection,
-      columnFilters,
+      columnFilters
     },
     enableRowSelection: true,
     onRowSelectionChange: setRowSelection,
@@ -38,7 +38,7 @@ export const useDataTable = <TData>({ ...props }: useDataTableProps<TData>) => {
     onColumnVisibilityChange: setColumnVisibility,
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
+    getPaginationRowModel: getPaginationRowModel()
   })
 
   return { table }

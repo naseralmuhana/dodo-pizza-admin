@@ -4,7 +4,7 @@ import type { ColumnDef } from "@tanstack/react-table"
 
 import { DataTable } from "@/components/data-table"
 import { useDataTable } from "@/hooks/use-data-table"
-import { DataTableToolbar } from "./data-table/data-table-toolbar"
+import { DataTableToolbar } from "@/components/data-table/data-table-toolbar"
 
 interface AppDataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
@@ -13,7 +13,7 @@ interface AppDataTableProps<TData, TValue> {
 
 export const AppDataTable = <TData, TValue>({
   columns,
-  data,
+  data
 }: AppDataTableProps<TData, TValue>) => {
   const { table } = useDataTable({ columns, data })
   return (

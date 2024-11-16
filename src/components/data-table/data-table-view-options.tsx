@@ -1,9 +1,7 @@
-"use client"
-
-import * as React from "react"
 import { Check, ChevronsUpDown, Settings2 } from "lucide-react"
+import { type Table as TanstackTable } from "@tanstack/react-table"
 
-import { capitalizeFirstLetter, cn, toTitleCase } from "@/lib/utils"
+import { cn, toTitleCase } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import {
   Command,
@@ -18,10 +16,9 @@ import {
   PopoverContent,
   PopoverTrigger
 } from "@/components/ui/popover"
-import { Table } from "@tanstack/react-table"
 
 interface DataTableViewOptionsProps<TData> {
-  table: Table<TData>
+  table: TanstackTable<TData>
 }
 
 export function DataTableViewOptions<TData>({
@@ -35,11 +32,11 @@ export function DataTableViewOptions<TData>({
           aria-label="Toggle columns"
           role="combobox"
           size="sm"
-          className="ml-auto hidden h-8 lg:flex"
+          className="ml-auto h-8"
         >
           <Settings2 />
           View
-          <ChevronsUpDown className="ml-1 shrink-0 opacity-50" />
+          <ChevronsUpDown className="shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0" align="end">

@@ -20,7 +20,7 @@ export const IconButton = ({
     <AppTooltip content={tooltipContent} isCapitalize>
       <Button variant="ghost" size="icon" className="h-8 w-8">
         {createElement(IconComponent, {
-          ...props,
+          ...props
         })}
       </Button>
     </AppTooltip>
